@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>REAL SENSI ULTRA GOLD CYBER V29 MASTER</title>
+
+<style>
+
+:root{
+--gold:#ffd700;
+--gold2:#ff9800;
+--neon:#8b0000;
+--bg:#050505;
+--red:#ff3b3b;
+--roxo:#9c27b0;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:
+radial-gradient(circle at center,#1a0000 0%,#000 75%);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow-x:hidden;
+color:#fff;
+aspect-ratio: 1/1;
+max-width: 100%;
+max-height: 100vh;
+margin: 0 auto;
+}
+
+.tela-login{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background: linear-gradient(135deg, #000000 0%, #2b0000 50%, #000000 100%);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:999;
+padding:20px;
+overflow:hidden;
+aspect-ratio: 1/1;
+}
+
+.luz-fundo{
+position:absolute;
+width:600px;
+height:600px;
+background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, rgba(139, 0, 0, 0.05) 50%, transparent 70%);
+animation: girar 8s linear infinite;
+z-index:0;
+}
+
+@keyframes girar{
+0%{transform:rotate(0deg) scale(1);}
+50%{transform:rotate(180deg) scale(1.2);}
+100%{transform:rotate(360deg) scale(1);}
+}
+
+.moldura{
+position:relative;
+z-index:2;
+width:100%;
+max-width:450px;
+padding:4px;
+background: linear-gradient(45deg, #ffd700, #ff9800, #ff3b3b, #8b0000, #ffd700);
+border-radius:30px;
+animation: brilho 2s linear infinite;
+background-size:400% 400%;
+aspect-ratio: 1/1;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+@keyframes brilho{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.caixa-login{
+background: #0a0a0a;
+border-radius:28px;
+padding:50px 30px;
+text-align:center;
+box-shadow: inset 0 0 20px #000, 0 0 40px rgba(139,0,0,0.3);
+width: 100%;
+height: 100%;
+}
+
+.logo-principal{
+font-size:78px;
+font-weight:900;
+background:
+linear-gradient(
+180deg,
+#fff9c4,
+#ffd700,
+#ff9800,
+#ff3b3b,
+#8b0000
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+filter:
+drop-shadow(0 0 10px #ffd700)
+drop-shadow(0 0 25px #ff9800)
+drop-shadow(0 0 40px #8b0000);
+animation:pulse 1.8s infinite alternate;
+text-align:center;
+}
+
+@keyframes pulse{
+100%{transform:scale(1.05);}
+}
+
+.sub-logo{
+margin-top:12px;
+font-size:18px;
+font-weight:900;
+letter-spacing:5px;
+color:#ff3b3b;
+text-shadow:0 0 20px #8b0000;
+margin-bottom:40px;
+}
+
+.aviso-sistema{
+background: rgba(255, 215, 0, 0.1);
+border:1px solid #ffd700;
+padding:12px;
+border-radius:12px;
+color:#ffd700;
+font-weight:bold;
+font-size:15px;
+margin-bottom:30px;
+box-shadow: 0 0 15px rgba(255,215,0,0.2);
+}
+
+.icone-cadeado{
+font-size:60px;
+color:#ff3b3b;
+text-shadow: 0 0 20px #ff3b3b;
+margin-bottom:20px;
+animation: flutuar 2s infinite alternate ease-in-out;
+}
+
+@keyframes flutuar{
+0%{transform:translateY(0);}
+100%{transform:translateY(-8px);}
+}
+
+.entrada-senha{
+width:100%;
+height:75px;
+padding:0 20px;
+border-radius:20px;
+border: 2px solid rgba(255,59,59,.3);
+background:#111;
+color:#fff;
+font-size:22px;
+font-weight:800;
+outline:none;
+text-align:center;
+transition:.3s;
+box-shadow: inset 0 0 10px #000, 0 0 20px rgba(139,0,0,.25);
+margin-bottom:15px;
+}
+
+.entrada-senha:focus{
+border-color:#ffd700;
+box-shadow: 0 0 30px rgba(255,215,0,.6), inset 0 0 10px #000;
+transform:scale(1.02);
+background:#151515;
+}
+
+.botao-entrar{
+width:100%;
+height:80px;
+border:none;
+border-radius:20px;
+font-size:28px;
+font-weight:900;
+cursor:pointer;
+color:#fff;
+background: linear-gradient(135deg, #ffd700, #ff9800, #ff3b3b, #8b0000);
+background-size:400% 400%;
+animation: gradienteAnimado 3s ease infinite;
+box-shadow: 0 0 20px #ffd700, 0 0 40px #ff3b3b;
+transition:.3s;
+letter-spacing:2px;
+margin-top:10px;
+}
+
+@keyframes gradienteAnimado{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.botao-entrar:hover{
+transform:scale(1.04);
+box-shadow: 0 0 30px #ffd700, 0 0 60px #ff3b3b, 0 0 80px #8b0000;
+}
+
+.mensagem-erro{
+display:none;
+margin-top:15px;
+font-size:18px;
+font-weight:800;
+color:#ff3b3b;
+text-shadow:0 0 15px #ff3b3b;
+animation: tremer 0.2s infinite alternate;
+background: rgba(139,0,0,0.1);
+padding:8px;
+border-radius:8px;
+border:1px solid #ff3b3b;
+}
+
+@keyframes tremer{
+100%{transform:translateX(2px);}
+}
+
+.versao-login{
+margin-top:25px;
+color:#888;
+font-size:14px;
+letter-spacing:2px;
+}
+
+.olho-capa {
+width: 130px;
+height: 130px;
+margin: 15px auto;
+position: relative;
+background: radial-gradient(circle, #fff 0%, #f1f1f1 40%, #999 100%);
+border-radius: 70%;
+box-shadow: 
+inset 0 0 20px #000, 
+0 0 30px rgba(255, 59, 59, 0.6), 
+0 0 60px rgba(255, 215, 0, 0.3);
+animation: pulsarOlho 2s infinite alternate ease-in-out;
+}
+
+@keyframes pulsarOlho {
+0% { transform: scale(1); box-shadow: inset 0 0 20px #000, 0 0 30px rgba(255, 59, 59, 0.6), 0 0 60px rgba(255, 215, 0, 0.3); }
+100% { transform: scale(1.08); box-shadow: inset 0 0 25px #000, 0 0 40px rgba(255, 59, 59, 0.8), 0 0 80px rgba(255, 215, 0, 0.5); }
+}
+
+.olho-capa .iris {
+width: 65px;
+height: 65px;
+background: linear-gradient(45deg, #8b0000, #ff3b3b, #ff9800);
+border-radius: 50%;
+position: absolute;
+top: 50%; left: 50%;
+transform: translate(-50%, -50%);
+box-shadow: 0 0 15px #000, inset 0 0 10px rgba(0, 0, 0, 0.5);
+animation: brilhoIris 1.5s infinite alternate;
+}
+
+@keyframes brilhoIris {
+0% { filter: brightness(1); }
+100% { filter: brightness(1.4); }
+}
+
+.olho-capa .pupila {
+width: 30px;
+height: 30px;
+background: #000;
+border-radius: 50%;
+position: absolute;
+top: 50%; left: 50%;
+transform: translate(-50%, -50%);
+box-shadow: 0 0 8px #000;
+}
+
+.olho-capa .brilho {
+width: 18px;
+height: 18px;
+background: #fff;
+border-radius: 50%;
+position: absolute;top: 30%; left: 35%;
+opacity: 0.9;
+filter: blur(1px);
+}
+
+#loader{
+display:none;
+margin-top:30px;
+padding:40px 20px;
+background: rgba(0,0,0,0.6);
+border-radius:25px;
+border:1px solid rgba(255,59,59,.4);
+box-shadow: inset 0 0 20px #000, 0 0 40px rgba(255,59,59,.2);
+text-align:center;
+aspect-ratio: 1/0.8;
+}
+
+#loader h2{
+font-size:28px;
+font-weight:900;
+color:#ffd700;
+text-shadow:0 0 15px #ff3b3b;
+letter-spacing:2px;
+margin-bottom:15px;
+animation: piscarTexto 0.8s infinite alternate;
+}
+
+@keyframes piscarTexto{
+100%{opacity:0.7;}
+}
+
+.scan-box{
+width:100%;
+height:35px;
+margin-top:20px;
+background:#111;
+border-radius:30px;
+overflow:hidden;
+border:2px solid rgba(255,59,59,.6);
+box-shadow:inset 0 0 15px #000, 0 0 20px rgba(255,59,59,.3);
+}
+
+.scan-fill{
+width:0%;
+height:100%;
+background: linear-gradient(90deg, #ffd700, #ff9800, #ff3b3b, #8b0000);
+background-size:200% 200%;
+animation: moverGrad 0.5s linear infinite;
+box-shadow: 0 0 30px #ff3b3b;
+transition:.15s ease-out;
+}
+
+@keyframes moverGrad{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+#scanPercent{
+font-size:32px !important;
+font-weight:900;
+color:#fff !important;
+text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #ff3b3b;
+margin-top:15px !important;
+}
+
+.container{
+display:none;
+width:100%;
+max-width:700px;
+aspect-ratio: 1/1;
+}
+
+.card{
+padding:45px 35px;
+border-radius:35px;
+background:
+linear-gradient(
+180deg,
+rgba(139,0,0,.08),
+rgba(255,145,0,.03)
+);
+border:
+1px solid rgba(139,0,0,.25);
+backdrop-filter:blur(15px);
+box-shadow:
+0 0 30px rgba(139,0,0,.2);
+width: 100%;
+height: 100%;
+}
+
+.title{
+font-size:40px;
+font-weight:900;
+text-align:center;
+margin-bottom:30px;
+color:#8b0000;
+text-shadow:
+0 0 12px #8b0000,
+0 0 30px #ffd700;
+}
+
+input,
+select{
+width:100%;
+height:76px;
+margin-top:22px;
+padding:0 20px;
+border-radius:24px;
+border:2px solid rgba(139,0,0,.2);
+background:#080808;
+color:#fff;
+font-size:22px;
+font-weight:800;
+outline:none;
+text-align:center;
+transition:.25s;
+box-shadow:
+0 0 18px rgba(139,0,0,.2);
+}
+
+input:focus,
+select:focus{
+border-color:#8b0000;
+box-shadow:
+0 0 30px rgba(139,0,0,.5);
+transform:scale(1.01);
+}
+
+.btn{
+width:100%;
+height:88px;
+margin-top:35px;
+border:none;
+border-radius:28px;
+font-size:32px;
+font-weight:900;
+cursor:pointer;
+color:#fff;
+background:
+linear-gradient(
+135deg,
+#ffd700,
+#ff9800,
+#8b0000
+);
+box-shadow:
+0 0 15px #ffd700,
+0 0 30px #ff9800,
+0 0 50px #8b0000;
+transition:.25s;
+}
+
+.btn:hover{
+transform:scale(1.03);
+}
+
+.sensi-box{
+padding:30px;
+border-radius:30px;
+background:
+linear-gradient(
+180deg,
+rgba(139,0,0,.08),
+rgba(255,145,0,.03)
+);
+border:
+1px solid rgba(139,0,0,.2);
+aspect-ratio: 1/0.95;
+}
+
+.sensi-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.sensi-title{
+font-size:28px;
+font-weight:900;
+color:#8b0000;
+}
+
+.sensi-badge{
+padding:10px 20px;
+border-radius:15px;
+background:
+linear-gradient(
+135deg,
+#ffd700,
+#8b0000
+);
+font-size:18px;
+font-weight:900;
+color:#fff;
+}
+
+.sensi-item{
+margin-top:22px;
+}
+
+.sensi-info{
+display:flex;
+justify-content:space-between;
+margin-bottom:8px;
+}
+
+.sensi-name{
+font-size:18px;
+font-weight:800;
+}
+
+.sensi-number{
+font-size:22px;
+font-weight:900;
+color:#8b0000;
+}
+
+.sensi-bar{
+width:100%;
+height:18px;
+background:#111;
+border-radius:30px;
+overflow:hidden;
+}
+
+.sensi-fill{
+height:100%;
+border-radius:30px;
+background:
+linear-gradient(
+90deg,
+#ffd700,
+#ff9800,
+#8b0000
+);
+box-shadow:
+0 0 15px #8b0000;
+}
+
+.fire-box{
+margin-top:30px;
+padding:30px;
+border-radius:25px;
+text-align:center;
+background:
+linear-gradient(
+135deg,
+rgba(139,0,0,.15),
+rgba(255,145,0,.08)
+);
+border:
+1px solid rgba(139,0,0,.2);
+}
+
+.fire-number{
+font-size:70px;
+font-weight:900;
+color:#8b0000;
+text-shadow:
+0 0 15px #8b0000,
+0 0 35px #ffd700;
+}
+
+.fire-text{
+margin-top:10px;
+font-size:20px;
+font-weight:900;
+letter-spacing:2px;
+}
+
+.dpi-result{
+margin-top:22px;
+padding:18px;
+border-radius:18px;
+background:
+rgba(139,0,0,.1);
+text-align:center;
+font-size:22px;
+font-weight:900;
+color:#8b0000;
+border:
+1px solid rgba(139,0,0,.25);
+}
+
+.ai-msg{
+margin-top:22px;
+padding:18px;
+border-radius:18px;
+background:
+linear-gradient(
+135deg,
+#ffd700,
+#8b0000
+);
+color:#fff;
+font-size:20px;
+font-weight:900;
+text-align:center;
+box-shadow:
+0 0 25px #8b0000;
+}
+
+#result{
+display:none;
+margin-top:30px;
+}
+
+@media(max-width:700px){
+.logo-principal{
+font-size:50px;
+}
+.card{
+padding:35px 22px;
+}
+.title{
+font-size:30px;
+}
+input,
+select{
+height:68px;
+font-size:20px;
+}
+.btn{
+height:80px;
+font-size:28px;
+}
+.fire-number{
+font-size:56px;
+}
+}
+
+</style>
+</head>
+<body>
+
+<div class="tela-login" id="telaLogin">
+<div class="luz-fundo"></div>
+<div class="moldura">
+<div class="caixa-login">
+<div class="logo-principal">REAL SENSI</div>
+<div class="sub-logo">ULTRA GOLD CYBER V29</div>
+<div class="aviso-sistema">🔒 ACESSO RESTRITO AO SISTEMA</div>
+<div class="icone-cadeado">🔐</div>
+<input type="password" id="senha" class="entrada-senha" placeholder="DIGITE A SENHA">
+<div id="erro" class="mensagem-erro">❌ SENHA INCORRETA! TENTE NOVAMENTE</div>
+<button class="botao-entrar" onclick="abrirPainel()">⚡ ENTRAR</button>
+<div class="versao-login">VERSÃO MASTER • 2026</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="card">
+<div class="title">⚡ IA CALCULADORA ANTI-PINAR 1000%</div>
+
+<input id="marca" placeholder="MARCA DO CELULAR">
+<input id="modelo" placeholder="MODELO">
+<input id="famoso" placeholder="INFLUENCIADOR">
+
+<select id="tipo">
+<option>BAIXA</option>
+<option selected>MEDIA</option>
+<option>ALTA</option>
+</select>
+
+<select id="modo">
+<option selected>NORMAL</option>
+<option>LENDA</option>
+<option>PROIBIDA</option>
+</select>
+
+<select id="calibragem">
+<option>CALIBRADA</option>
+<option selected>PRO</option>
+<option>ULTRA PRO</option>
+</select>
+
+<select id="usarDpi" onchange="toggleDpi()">
+<option>OFF</option>
+<option>ON</option>
+</select>
+
+<div id="dpiField" style="display:none;">
+<input id="dpi" type="number" placeholder="DPI">
+</div>
+
+<button class="btn" onclick="processar()">⚡ GERAR SENSI 1000%</button>
+
+<div id="loader">
+<div class="olho-capa"><div class="iris"><div class="pupila"></div><div class="brilho"></div></div></div>
+<h2 id="armaNome">ANALISANDO RECUO...</h2>
+<div class="scan-box"><div class="scan-fill" id="scanFill"></div></div>
+<h2 id="scanPercent">0%</h2>
+</div>
+
+<div id="result"><div id="cards"></div></div>
+</div>
+</div>
+
+<script>
+
+const scans=[
+"ESTABILIZANDO MIRA...",
+"REDUZINDO TREMIDO...",
+"AJUSTANDO FOCO...",
+"CALIBRANDO CAPA 1000%...",
+"BLOQUEANDO RECUO...",
+"SINCRONIZANDO DPI...",
+"OTIMIZANDO PARA NÃO PINAR...",
+"FINALIZANDO IA..."
+];
+
+function abrirPainel(){
+const senha = document.getElementById("senha").value;
+// ✅ SENHA ALTERADA PARA GERAR00 ✅
+if(senha !== "GERAR00"){ 
+    document.getElementById("erro").style.display="block"; 
+    navigator.vibrate?.(300); 
+    return; 
+}
+document.getElementById("telaLogin").style.display="none";
+document.querySelector(".container").style.display="block";
+}
+
+function toggleDpi(){
+const usar= document.getElementById("usarDpi").value;
+document.getElementById("dpiField").style.display= usar==="ON" ? "block" : "none";
+}
+
+function processar(){
+document.getElementById("loader").style.display="block";
+document.getElementById("result").style.display="none";
+let percent=0; const arma= document.getElementById("armaNome"); const fill= document.getElementById("scanFill"); const scan= document.getElementById("scanPercent");
+let troca= setInterval(()=>{ arma.innerText= scans[Math.floor(Math.random()*scans.length)]; },180);
+let barra= setInterval(()=>{ percent+=4; if(percent>100) percent=100; scan.innerText= percent+"%"; fill.style.width= percent+"%"; },100);
+setTimeout(()=>{ clearInterval(troca); clearInterval(barra); document.getElementById("loader").style.display="none"; gerar(); },2600);
+}
+
+function criarBarra(nome,valor){
+let largura = (valor / 200) * 100;
+return`<div class="sensi-item"><div class="sensi-info"><div class="sensi-name">${nome}</div><div class="sensi-number">${valor}</div></div><div class="sensi-bar"><div class="sensi-fill" style="width:${largura}%"></div></div></div>`;
+}
+
+function gerar(){
+const tipo = document.getElementById("tipo").value;
+const modo = document.getElementById("modo").value;
+const calibragem = document.getElementById("calibragem").value;
+const marca = document.getElementById("marca").value.toLowerCase();
+const modelo = document.getElementById("modelo").value.toLowerCase();
+const famoso = document.getElementById("famoso").value.toLowerCase();
+const dpi = Number(document.getElementById("dpi").value || 702); // ✅ DPI PADRÃO OTIMIZADO
+
+let base = {geral:0, red:0, mira2:0, mira4:0, awm:0, livre:0, botao:0};
+let potencia = 1.00;
+let ajusteRecuo = 1.00;
+
+// ✅ SENSI PERFEITA, NUNCA RUIM, VALORES ATÉ 200
+if(tipo === "BAIXA"){
+base = { geral:140, red:132, mira2:125, mira4:118, awm:112, livre:130, botao:40 };
+potencia = 0.95;
+ajusteRecuo = 0.90;
+}
+if(tipo === "MEDIA"){
+base = { geral:170, red:162, mira2:153, mira4:145, awm:138, livre:160, botao:44 };
+potencia = 1.15;
+ajusteRecuo = 1.05;
+}
+if(tipo === "ALTA"){
+base = { geral:200, red:198, mira2:188, mira4:176, awm:165, livre:192, botao:48 }; // ✅ MELHOR SENSI
+potencia = 1.35;
+ajusteRecuo = 1.20;
+}
+
+if(modo === "LENDA"){ potencia += 0.08; ajusteRecuo += 0.04; }
+if(modo === "PROIBIDA"){ potencia += 0.15; ajusteRecuo += 0.08; } // ✅ PROIBIDA É A MAIS FORTE
+
+if(calibragem === "PRO"){ potencia += 0.05; }
+if(calibragem === "ULTRA PRO"){ potencia += 0.10; ajusteRecuo += 0.03; }
+
+// ✅ AJUSTES POR MARCA
+if(marca.includes("xiaomi")) { potencia += 0.06; ajusteRecuo -= 0.02; }
+if(marca.includes("iphone")) { potencia += 0.12; ajusteRecuo += 0.06; }
+if(marca.includes("samsung")) { potencia += 0.05; }
+if(marca.includes("motorola")) { potencia += 0.03; ajusteRecuo -= 0.03; }
+if(marca.includes("realme") || marca.includes("oppo")) { potencia += 0.07; }
+if(marca.includes("poco") || marca.includes("redmi")) { potencia += 0.09; ajusteRecuo -= 0.04; }
+
+// ✅ AJUSTES POR MODELO
+if(modelo.includes("a03") || modelo.includes("a10")) { potencia -= 0.05; ajusteRecuo -= 0.05; }
+if(modelo.includes("s23") || modelo.includes("s24")) { potencia += 0.04; }
+if(modelo.includes("note")) { potencia += 0.06; }
+
+// ✅ AJUSTES POR INFLUENCIADOR
+if(famoso.includes("nobru")) { potencia += 0.07; base.botao = 46; ajusteRecuo += 0.05; }
+if(famoso.includes("two9")) { potencia += 0.09; base.botao = 44; }
+if(famoso.includes("cerol")) { potencia += 0.04; base.botao = 41; ajusteRecuo -= 0.02; }
+if(famoso.includes("babi")) { potencia += 0.03; base.botao = 40; }
+if(famoso.includes("level")) { potencia += 0.08; base.botao = 45; ajusteRecuo += 0.04; }
+if(famoso.includes("mm")) { potencia += 0.06; base.botao = 43; }
+
+let valores = {
+geral: Math.round(base.geral * potencia),
+red: Math.round(base.red * potencia * ajusteRecuo),
+mira2: Math.round(base.mira2 * potencia * ajusteRecuo),
+mira4: Math.round(base.mira4 * potencia * ajusteRecuo),
+awm: Math.round(base.awm * potencia),
+livre: Math.round(base.livre * potencia),
+botao: base.botao
+};
+
+// ✅ GARANTE QUE NÃO PASSE DE 200 E FIQUE PERFEITA
+valores.geral = Math.min(200, Math.max(100, valores.geral));
+valores.red = Math.min(200, Math.max(100, valores.red));
+valores.mira2 = Math.min(200, Math.max(80, valores.mira2));
+valores.mira4 = Math.min(200, Math.max(70, valores.mira4));
+valores.awm = Math.min(200, Math.max(60, valores.awm));
+valores.livre = Math.min(200, Math.max(90, valores.livre));
+valores.botao = Math.max(36, Math.min(48, valores.botao));
+
+document.getElementById("cards").innerHTML=
+`
+<div class="sensi-box">
+<div class="sensi-top">
+<div class="sensi-title">IA CALCULADA 1:1</div>
+<div class="sensi-badge">🔥 ${modo}</div>
+</div>
+
+${criarBarra("GERAL",valores.geral)}
+${criarBarra("PONTO VERMELHO",valores.red)}
+${criarBarra("MIRA 2X",valores.mira2)}
+${criarBarra("MIRA 4X",valores.mira4)}
+${criarBarra("AWM",valores.awm)}
+${criarBarra("OLHADINHA",valores.livre)}
+
+<div class="fire-box">
+<div class="fire-number">${valores.botao}</div>
+<div class="fire-text">BOTÃO ULTRA CAPA</div>
+</div>
+
+<div class="dpi-result">
+⚡ DPI OTIMIZADO : ${dpi} | PROPORÇÃO 1:1
+</div>
+
+<div class="ai-msg">
+✅ 1000% ANTI-PINAR • TRAVADO NA CABEÇA
+</div>
+</div>
+`;
+
+document.getElementById("result").style.display="block";
+}
+
+</script>
+</body>
+</html>
+
